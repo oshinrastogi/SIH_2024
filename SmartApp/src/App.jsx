@@ -9,7 +9,7 @@ import Video from './component/Video/Video';
 import VideoApp from './component/VideoApp/VideoApp';
 import ZegoCloud from './component/VideoApp/ZegoCloud/ZegoCloud';
 import Hello from './component/Video/Hello';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>

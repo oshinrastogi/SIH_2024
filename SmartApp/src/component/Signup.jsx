@@ -1,7 +1,9 @@
-// src/Login.js
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from "./Auth.module.css";
+import Lottie from "lottie-react";
+import SignupSupport from './SignupSupport';
+import animation2 from "../helper/animation-2.json";
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -37,32 +39,39 @@ const Signup = () => {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f0f0f0' }}>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', width: '300px', padding: '20px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-                <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Signup</h2>
-                <label style={{ marginBottom: '10px' }}>
-                    Email:
+        <div className={styles.login}>
+            <div className={styles.container1}>
+                <Lottie animationData={animation2}/>
+            </div>
+            <form onSubmit={handleSubmit} className={styles.container2}>
+                <h2 className={styles.title}>SmartApp</h2>
+                <label className={styles.label}> 
+                    Email:<br/>
                     <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ccc', borderRadius: '4px' }}
+                        className={styles.input}
+
+                        
                     />
                 </label>
-                <label style={{ marginBottom: '20px' }}>
-                    Password:
+                <label className={styles.label}>
+                    Password:<br/>
                     <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ccc', borderRadius: '4px' }}
+                        className={styles.input}
+
                     />
                 </label>
-                <button type="submit" style={{ padding: '10px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Sign Up</button>
-                <Link to="/">Already has an account ?</Link>
+                <button type="submit" className={styles.button}>Sign Up</button>
+                <Link to="/" >Already has an account ?</Link>
             </form>
+            
         </div>
     );
 };

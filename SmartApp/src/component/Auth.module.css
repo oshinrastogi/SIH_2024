@@ -7,41 +7,50 @@
     padding: 1rem;
     overflow: hidden;
     flex-wrap: wrap-reverse;
+    overflow-y: hidden;
 }
 .container1{
     width: 50%;
 }
 .form{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
+    height: 300px;
+    width: 300px;
 }
 .container2{
     position: relative;
-    width: 50%;
+    width: 31%;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     overflow: hidden;
-}
-.container2::before{
+    border: 1px solid #1ea89f;
+    height: 400px;
+
+ }
+ 
+/* .container2::before{
     content: "";
     position: absolute;
     top: var(--x);
     left: var(--y);
     transform: translate(-50% , -50%);
     background: radial-gradient(#1FCEC3 , transparent , transparent);
-    width: 800px;
-    height: 800px;
+    width: 400px;
+    height: 400px;
     opacity: 0;
     transition: 0.5s , top 0s , left 0s ;
-}
+} */
 
-.container2:hover::before{
+.container2:hover{
     opacity: 1;
 }
 
@@ -103,3 +112,78 @@
         margin-left: -1rem;
     }
 }
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.title{
+    color: #0decdd;
+    margin-top: 10px;
+}
+
+.input{
+    width: 330px;
+    height: 40px;
+    border-radius: 1.5rem;
+    border: 1px #0decdd;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.button{
+    all: unset;
+    background-color:#0decdd;
+    display: flex;
+    border-radius: 1.5rem;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin-left: -1rem;
+}
+
+.link{
+    font-size: larger;
+}
+
+.label{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* .form_nav{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+} */
+/* Ensure the form uses flex-direction: row */
+.form_nav {
+    display: flex;
+    flex-direction: row; /* Ensures items are aligned in a row */
+    /* align-items: center; Vertically center items */
+    margin-left: 900px;
+  }
+  
+  .form_nav .form-control {
+    margin-right: 10px; /* Adds space between the search input and the button */
+  }
+  
+.tt{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+ .cards{
+    /* width: 1000px;
+    height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    
+ }

@@ -1,0 +1,14 @@
+.custom-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .custom-card-img {
+    height: 180px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  }
+  
+  .list-group-item {
+    padding: 10px 15px; /* Adjust padding for list items */
+  }
+  

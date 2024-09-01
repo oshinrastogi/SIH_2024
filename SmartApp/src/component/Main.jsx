@@ -1,14 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import NavBar from './NavBar';
+import Carousel from './Carousel'; // Import CarouselComponent from Carousel.jsx
+import CardGrid from './CardGrid';
 
 const Main = () => {
   return (
     <div>
-      <h1>
-        <Link to="/dashboard/videoApp">Video Call</Link>
-      </h1>
+      <NavBar />
+      <Carousel />
+      <CardGrid />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

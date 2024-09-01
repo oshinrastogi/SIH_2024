@@ -10,7 +10,7 @@ import { useAuth } from './context/auth';
 
 const Login = () => {
   const [loading, setloading] = useState(true);
-  const [count, setcount] = useState(7);
+  const [count, setcount] = useState(3);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [auth, setAuth] = useAuth();
@@ -57,6 +57,21 @@ const Login = () => {
       console.log(err);
     }
   };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setcount((prev) => prev - 1);
+  //   }, 1000);
+
+  //   // Clear the interval when count reaches zero
+  //   if (count <= 0) {
+  //     clearInterval(interval);
+  //     setloading(false);
+  //   }
+
+  //   // Cleanup function to clear the interval when component unmounts
+  //   return () => clearInterval(interval);
+  // }, [count]); // Include count as a dependency
+
 
   if (loading) {
     return (
@@ -71,7 +86,7 @@ const Login = () => {
       </div>
       <div className={styles.container2}>
         <form onSubmit={handleSubmit} className={styles.loginForm}>
-          <h2 className={styles.title}>Login</h2>
+          <h2 className={styles.title}>SmartApp</h2>
           <label className={styles.label}>
             Email:
             <input
